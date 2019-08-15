@@ -4,6 +4,7 @@
 
 <br>
 H5banner轮播切换时，选中的banner滑动居中<br>
+
 ![仿app首页切换效果.gif](http://upload-images.jianshu.io/upload_images/3888312-1fbceb37949eb76e.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 <br>
@@ -15,10 +16,11 @@ H5banner轮播切换时，选中的banner滑动居中<br>
 
 这个头部banner的切换效果我做了两种，其一：当某一个slide在边上被压住点击时会移动一定距离，使slide完全展示出来。其二就是现在动图中的居中展示效果。
 <br>
+
 ![第一种.jpg](http://upload-images.jianshu.io/upload_images/3888312-2157df3bf4294195.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 <br>
-###页面切换实现
+### 页面切换实现
 
 因为是整体轮播，所以先设置了一个宽高为屏幕视口宽高的swiper，在页面顶部设置一个banner轮播，然后使其关联起来，在头部swiper注册一个click事件监听，在主体的swiper注册一个slideChangeTransitionEnd事件监听，关键代码如下：
 ```
@@ -59,8 +61,8 @@ var sbody = new Swiper('#sbody', {
 
 
 
-###导航条切换居中实现
-#####主要有以下两点：
+### 导航条切换居中实现
+##### 主要有以下两点：
 1. 以判断如果要居中偏移量是多少；
 2. 判断元素是否在可以移动到中心位置的距离范围内。
 
@@ -106,7 +108,7 @@ function slidecenter(clickedIndex) {
 
 
 <br><br>
-###tips：避免多个swiper互相影响问题
+### tips：避免多个swiper互相影响问题
 类名和分页器名一定要分开
 ```
 var swiper1 = new Swiper('.swiper-container1', {
